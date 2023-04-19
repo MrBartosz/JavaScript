@@ -1,4 +1,4 @@
-/*
+
 Cel zadania
 
 Otrzymując zdanie jako parametr wejściowy, zwróć obiekt, który będzie zawierał liczbę wystąpień każdego słowa w zdaniu. Zignoruj to czy słowo jest napisane z dużej czy z małej litery.
@@ -14,4 +14,4 @@ countWords("Nauka JavaScript to frajda"); => {
 }
 
 
-*/
+
