@@ -1,15 +1,3 @@
-/*
-* Cel zadania
-*------------
-* Weź tablicę zawierającą zagnieżdżone tablice i zwróć płaską tablicę zawierającą  wartości liczbowe bez powtórek oraz pozbawioną wartości null/undefined.
-*
-* Przykładowo: 
-* flattenArray([4, [3, 2, undefined, 1], [1, 4, null, 5]]) => [4, 3, 2, 1, 5]
-* 
-* Oczekuj tylko jednego poziomu zagnieżdżenia tablic.
-* 
-*/
-
 function flattenArray(deepArray) {
     const result = [];
     

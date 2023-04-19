@@ -1,10 +1,3 @@
-/*
-* Cel zadania
-*------------
-* Zaimplementuj funkcję, sprawdzającą czy pudełko jest puste.
-*
-*/
-
 function thing(box) {
     // Sprawdza, czy w pudełku jest '*o*'
     return box.split(' ').join('').includes('*o*');

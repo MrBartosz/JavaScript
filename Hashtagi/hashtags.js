@@ -1,16 +1,3 @@
-/*
-* Cel zadania
-*------------
-* Zaimplementuj funkcję wyszukującą hashtagi w zdaniu
-*
-*
-* Przykład:
-* findTags('W 2020 #opanujeJS'); // => opanujeJS
-* findTags('Za chwilę dodam #opanujeJS!'); // => opanujeJS
-* findTags('Lubię tagować #yolo #love#happy #h3cker'); // => yolo, love, happy, h3cker
-* 
-*/
-
 function findTags(message) {
     const resultArray = [];
     const words = message.split(' ');
