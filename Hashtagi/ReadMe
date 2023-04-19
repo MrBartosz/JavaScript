@@ -1,5 +1,3 @@
-/*
-
 Cel zadania
 
 Zaimplementuj funkcję wyszukującą hashtagi w zdaniu
@@ -10,4 +8,3 @@ findTags('W 2020 #opanujeJS'); => opanujeJS
 findTags('Za chwilę dodam #opanujeJS!'); => opanujeJS
 findTags('Lubię tagować #yolo #love#happy #h3cker'); => yolo, love, happy, h3cker
  
-*/
