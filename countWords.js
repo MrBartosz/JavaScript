@@ -17,9 +17,7 @@
 */
 
 function countWords(sentence) {
-    const result = {
-      
-    }
+    const result = {}
     const words = sentence.split(' ')
     for (let word of words) {
       const wordLowerCase = word.toLowerCase().replace(/\,/g,'');
