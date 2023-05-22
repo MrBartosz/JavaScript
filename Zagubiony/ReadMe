@@ -1,0 +1,56 @@
+Oh no! You decided to go on a hike in a new area today and ended up getting lost! And like all good explorers, you decide to go with your instincts and aimlessly walk through the woods looking for civilization.
+
+Given the dimensions of the wooded area, your starting coordinates, and the directions you took while lost in the woods, create a function that will let the park ranger know where you ended up and if you made it out safely or remained lost in the woods until intercepted by a bear (sorry, I don't make the rules).
+
+The dimensions refer to the size of the wooded area, in meters. The starting coordinates are somewhere inside the wooded area in the format of an x-y coordinate. The directions will be an array consisting of the initial facing direction--either north, south, east, or west ('N', 'S', 'E', 'W')--and either directions that you turn--left ('L') or right ('R')--or distance that you travel forward--a number. The zero index is always the initial facing direction and the rest of the elements are a mix of the turns and travel distances, which are not necessarily alternating (i.e. ['N', 'L', 'R', 3, 'L', 4] is valid).
+
+For example, the parameters ([500, 500], [250, 250], ['N', 12, 'L', 4, 'R', 37]) can be read as follows: The size of the wooded area is 500 x 500 and you started in the middle (x250 y250). You were initially facing north and traveled 12 meters, turned left, traveled 4 meters, turned right, and traveled another 37 meters. When you started you were facing north. When you turned left, you were then facing west. When you turned right, you were facing north once again. In this example, you would have ended up at x246 y299, which means you remained lost in the woods until a bear caught sight of you and no one has seen you since.
+
+A more thorough breakdown of the directions above: You were initially facing north and traveled 12 meters (add 12 to the y coordinate, now equal to 262), turned left to face west, traveled 4 meters (subtract 4 from the x coordinate, now equal to 246), turned right to face north, and traveled another 37 meters (add 37 to the y coordinate, now equal to 299). The ending coordinate is then [246, 299]
+
+Notes: You remain lost in the woods if you are still in the woods at the end of the directions (i.e. the x or y coordinates of the ending location are either less than 0 or greater than the dimensions of the wooded area). The edge of the woods is still in the woods. Additionally, the array can consist of non-alternating elements of direction changes and distances.
+
+Additional Examples:
+
+determineOutcome([1000, 1000], [452, 591], ['N', 12, 'L', 4, 'R', 37]);
+=> [[448, 640], false]
+/*
+  the wooded area is 1000m x 1000m, 
+  you started at x452 y591, 
+  you were initially facing north, 
+  and you moved 12m north, 4m west, and 37m north, 
+  which left you stranded in the woods at x448 y640
+*/
+
+determineOutcome([1500, 850], [320, 701], ['N', 85, 'L', 56, 'R', 85]);
+=> [[264, 871], true]
+/*
+  the wooded area is 1500m x 850m, 
+  you started at x320 y701, 
+  you were initially facing north, 
+  and you moved 85m north, 56m west, and 85m north, 
+  which brought you to safety, stopping at x264 y871
+*/
+
+determineOutcome([1500, 850], [320, 701], ['N', 85, 'L', 56, 'R', 12, 'L', 265]);
+=> [[-1, 798], true]
+/*
+  the wooded area is 1500m x 850m, 
+  you started at x320 y701, 
+  you were initally facing north, 
+  and you moved 85m north, 56m west, 12m north, and 265m west, 
+  which brought you to safety, stopping at x-1 y798
+*/
+Input:
+ dimensions (array): x-y dimensions of wooded area
+ startCoord (array): coordinates of starting location
+ directions (array): directions
+
+Example: ([1000, 1000], [452, 325], ['N', 123, 'R', 37])
+
+Output: array of ending x-y coordinates and boolean whether safe (true) or bear food (false)
+
+Constraints:
+wooded area dimensions: 100 <= x|y <= 100000
+numnber of directions: 0 <= x <= 1000
+starting coordinates: 100 < x|y < 100000
