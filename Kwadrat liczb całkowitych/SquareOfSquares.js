@@ -31,3 +31,5 @@ console.log(isSquare(64)); // true
 console.log(isSquare(65)); // false
 console.log(isSquare(81)); // true
 console.log(isSquare(82)); // false
+console.log(isSquare(90)); // false
+console.log(isSquare(100)); // true
