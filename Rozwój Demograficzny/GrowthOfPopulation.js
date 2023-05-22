@@ -1,13 +1,12 @@
 function nbYear(p0, percent, aug, p) {
-    let years = 0;
-    let population = p0;
-    while(population < p) {
-      population = population + (population * percent / 100) + aug;
-      years ++;
-    }
-    
-    return years;
+  let years = 0;
+  let population = p0;
+  while (population < p) {
+    population = Math.floor(population + (population * percent / 100) + aug);
+    years++;
   }
+  return years;
+}
 
 console.log(nbYear(1500,5,100,5000)) // 15
 console.log(nbYear(2000, 2.5, 100, 3000)); // 7
