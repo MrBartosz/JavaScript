@@ -1,4 +1,0 @@
-Napisz program, który wygeneruje losowe hasło składające się z 8 znaków. 
-
-Hasło powinno zawierać co najmniej jedną dużą literę, jedną małą literę, jedną cyfrę i jeden znak specjalny. 
-Program powinien umożliwić użytkownikowi wybór, czy chce, aby hasło zawierało tylko znaki alfanumeryczne, czy również znaki specjalne.
